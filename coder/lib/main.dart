@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:coder/modules/home.dart';
 import 'fooderlich_theme.dart';
-import 'package:flutter/material.dart';
-import 'fooderlich_theme.dart';
 
 void main() {
   runApp(Fooderlich());

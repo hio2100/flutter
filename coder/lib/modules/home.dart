@@ -4,6 +4,9 @@ import 'package:coder/widgets/card2.dart';
 import 'package:coder/widgets/card3.dart';
 import 'package:coder/widgets/card4.dart';
 import 'package:coder/widgets/card5.dart';
+import 'package:coder/widgets/card6.dart';
+import 'package:coder/widgets/author.dart';
+
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -20,6 +23,7 @@ class _HomeState extends State<Home> {
     Card3(),
     Card4(),
     Card5(),
+    Author(),
 
   ];
   @override
@@ -43,10 +47,10 @@ class _HomeState extends State<Home> {
           });
 
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
 
-            icon: Icon(Icons.wallet_giftcard),
+            icon:Icon(Icons.wallet_giftcard),
             label: 'MINE',
           ),
           BottomNavigationBarItem(
@@ -54,16 +58,20 @@ class _HomeState extends State<Home> {
             label: 'المناقصات',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.wallet_giftcard),
+            icon:Icon(Icons.wallet_giftcard),
             label: ' CONVERTER',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.abc),
+            icon:Icon(Icons.abc),
             label: 'CODES',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.abc),
-            label: 'testr',
+            icon:Icon(Icons.abc),
+            label: 'about us',
+          ),
+          BottomNavigationBarItem(
+            icon:Icon(Icons.abc),
+            label: 'author',
           ),
         ],
       ),

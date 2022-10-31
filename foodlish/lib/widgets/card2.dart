@@ -114,8 +114,8 @@ class Card2 extends StatelessWidget {
               Text(
                 ahmed.title,
                 style: TextStyle(
-                  fontSize: 20,
-                  fontStyle: FontStyle.italic,color:Colors.deepOrangeAccent
+                    fontSize: 20,
+                    fontStyle: FontStyle.italic,color:Colors.deepOrangeAccent
                 ),
 
               ),
@@ -128,7 +128,7 @@ class Card2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("المناقصات الحالية "),
+        title: Text("دليل المناقصات الحالية"),
       ),
       body: SafeArea(
         child: ListView.builder(

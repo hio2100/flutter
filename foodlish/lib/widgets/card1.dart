@@ -1,27 +1,30 @@
 import 'package:flutter/material.dart';
 import '../fooderlich_theme.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Card1 extends StatelessWidget {
   const Card1({Key? key}) : super(key: key);
 
   final String category = "";
-  final String title = "  ";
-  final String description = "";
-  final String cheif = "...";
+  final String title = " PRIVATE APP ,, NOT FOR PUBLIC USE ";
+  final String description = "PRIVATE APP ,, NOT FOR PUBLIC USE";
+  final String cheif = ".PRIVATE APP ,, NOT FOR PUBLIC USE..";
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        padding: EdgeInsets.all(0.0),
-        constraints: BoxConstraints.expand(
-          width: 350,
-          height: 450,
+    //    padding: EdgeInsets.all(0.0),
+        constraints: const BoxConstraints.expand(
+          width: 600,
+          height: 600,
         ),
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
-            image: const AssetImage('assets/mag1.png'),
-            fit: BoxFit.cover,
+          filterQuality: FilterQuality.high,
+
+            image: AssetImage('assets/mag1.jpg'),
+            fit: BoxFit.fitHeight,
           ),
           borderRadius: BorderRadius.all(Radius.circular(5.0)),
         ),
@@ -36,12 +39,13 @@ class Card1 extends StatelessWidget {
 
               child: Text(
                 title,
-                style: FooderlichTheme.darkTextTheme.headline1,
+
+                style:  GoogleFonts.acme(textStyle: Theme.of(context).textTheme.headline6),
               ),
 
             ),
             Positioned(
-              top: 100.0,
+              top: 20.0,
               child: Text(
                 description,
                 style: FooderlichTheme.darkTextTheme.headline3,

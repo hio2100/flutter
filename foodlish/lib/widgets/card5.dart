@@ -12,29 +12,53 @@ class Card5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("aaaa"),
-      ),
-      body: PageView(
-        children: [
-          Container(
-          //  color: Colors.greenAccent,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: const AssetImage('assets/mag1.png'),
-                fit: BoxFit.cover,
-              ),
-              borderRadius: BorderRadius.all(Radius.circular(5.0)),
+        appBar: AppBar(
+          title: Text("aaaa"),
+        ),
+        body: PageView(
+          children: [
+            Container(
+              width: double.infinity,
+              height: 150.0,
+              color: Colors.greenAccent,
+              margin: EdgeInsets.all(25),
+              padding: EdgeInsets.all(35),
+              alignment: Alignment.center,
+              transform: Matrix4.rotationZ(0.1),
+              child: Text("HOPE THIS HELP",
+                  style: TextStyle(fontSize: 25,color:Colors.black,fontStyle: FontStyle.italic)),
             ),
-          ),
-          Container(
-            color: Colors.lime,
-          ),
-          Container(
-            color: Colors.amberAccent,
-          ),
-        ],
-      ),
+            Container(
+              width: double.infinity,
+              height: 50.0,
+              color: Colors.cyanAccent,
+              margin: EdgeInsets.all(25),
+              padding: EdgeInsets.all(35),
+              alignment: Alignment.center,
+              transform: Matrix4.rotationZ(0.1),
+              child: Text("AMK",
+                  style: TextStyle(fontSize: 25)),
+            ),
+            Container(
+              padding: EdgeInsets.all(30),
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    Column(children: <Widget>[
+                      Icon(
+                          Icons.account_circle,
+                          size: 70
+                      ),
+                      Text('LASIX250@GMAIL.COM'),
+                    ]),
+
+
+                  ]
+              ),
+            ),
+          ],
+        )
+
     );
   }
 }

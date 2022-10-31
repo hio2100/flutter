@@ -22559,6 +22559,26 @@ class _Card4State extends State<Card4> {
                     title: Text(_foundUsers[index]['name']),
                     subtitle: Text(
                         '${_foundUsers[index]["age"].toString()} STORE'),
+                    onTap:(){
+                      print("${_foundUsers[index]["age"]}");
+                  showDialog(
+                    context:context,
+                    builder:(context)=>AlertDialog(
+                      title:Text("${_foundUsers[index]["id"]}"),
+                      content:Text("${_foundUsers[index]["name"]}"),
+                      actions:[
+                        TextButton(
+                          child:Text("اوكي"),
+                          onPressed:()=>Navigator.pop(context),
+
+                        ),
+
+                      ],
+                    ),
+
+
+                  );
+                    },
                   ),
                 ),
               )

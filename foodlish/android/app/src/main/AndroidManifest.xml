@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ahmed.foodlish">
    <application
-        android:label="foodlish"
+        android:label="Coder"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

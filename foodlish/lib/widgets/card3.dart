@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 
 class Card3 extends StatefulWidget {
@@ -112549,11 +112550,33 @@ class _Card3State extends State<Card3> {
                           style: const TextStyle(fontSize: 24),
                         ),
                         title: Text(_foundUsers[index]['id2'].toString()),
-                            //  tileColor: Colors.lightGreenAccent,
+                        //  tileColor: Colors.lightGreenAccent,
 
                         subtitle: Text(
                             '${_foundUsers[index]["name"].toString() +"==>STORE"+
                                 _foundUsers[index]["store"].toString()} '),
+                        onTap:(){
+                          Clipboard.setData(ClipboardData(text: "${_foundUsers[index]["id"]}"+"<--->"+"${_foundUsers[index]["id2"]}"+"${_foundUsers[index]["name"]}"+"${_foundUsers[index]["store"]}"));
+                          print("${_foundUsers[index]["age"]}");
+                          showDialog(
+                            context:context,
+                            builder:(context)=>AlertDialog(
+                              title:Text("${_foundUsers[index]["id"]}"),
+                              content:Text("${_foundUsers[index]["id2"]}"+"\n"+"${_foundUsers[index]["name"]}"),
+
+                              actions:[
+                                TextButton(
+                                  child:Text("نسخ"),
+                                  onPressed:()=>Navigator.pop(context),
+
+                                ),
+
+                              ],
+                            ),
+
+
+                          );
+                        },
 
                       ),
 

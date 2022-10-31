@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter/services.dart';
 
 
 class Card4 extends StatefulWidget {
@@ -22524,7 +22525,7 @@ class _Card4State extends State<Card4> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('MEK-AAA'),
+        title: const Text('MEK'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10),
@@ -22547,7 +22548,7 @@ class _Card4State extends State<Card4> {
                   ? ListView.builder(
                 itemCount: _foundUsers.length,
                 itemBuilder: (context, index) => Card(
-                 // key: ValueKey(_foundUsers[index]["id"]),
+                  // key: ValueKey(_foundUsers[index]["id"]),
                   color: Colors.black,
                   elevation: 4,
                   margin: const EdgeInsets.symmetric(vertical: 12),
@@ -22559,6 +22560,27 @@ class _Card4State extends State<Card4> {
                     title: Text(_foundUsers[index]['name']),
                     subtitle: Text(
                         '${_foundUsers[index]["age"].toString()} STORE'),
+                    onTap:(){
+                      Clipboard.setData(ClipboardData(text: "${_foundUsers[index]["id"]}"+"${_foundUsers[index]["name"]}"+"${_foundUsers[index]["age"]}"));
+                     // print("${_foundUsers[index]["age"]}");
+                      showDialog(
+                        context:context,
+                        builder:(context)=>AlertDialog(
+                          title:Text("${_foundUsers[index]["id"]}"),
+                          content:Text("${_foundUsers[index]["name"]}"),
+                          actions:[
+                            TextButton(
+                              child:Text("نسخ"),
+                              onPressed:()=>Navigator.pop(context),
+
+                            ),
+
+                          ],
+                        ),
+
+
+                      );
+                    },
                   ),
                 ),
               )
@@ -22572,5 +22594,5 @@ class _Card4State extends State<Card4> {
       ),
     );
   }
-  }
+}
 

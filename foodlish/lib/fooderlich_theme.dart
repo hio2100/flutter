@@ -34,6 +34,7 @@ class FooderlichTheme {
       fontSize: 14,
       fontWeight: FontWeight.w700,
       color: Colors.white,
+
     ),
     headline1: GoogleFonts.openSans(
       fontSize: 32,
@@ -75,6 +76,7 @@ class FooderlichTheme {
       primaryColor: Colors.grey[900],
       accentColor: Colors.green[600],
       textTheme: darkTextTheme,
+
     );
   }
 }
